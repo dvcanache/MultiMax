@@ -1,4 +1,4 @@
-const Recomendados = () => {
+const Noticias = () => {
   return (
     <div>
 
@@ -6,4 +6,4 @@ const Recomendados = () => {
   )
 };
 
-export default Recomendados;
+export default Noticias;
