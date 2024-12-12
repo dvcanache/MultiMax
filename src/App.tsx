@@ -1,11 +1,11 @@
-function App() {
+import React from 'react';
+import NavBar from './Components/NavBar/NavBar';
 
+const App = () => {
   return (
-    <>
-      <div className="bg-blue-500">
-        <h2>Multimax</h2>
-      </div>
-    </>
+    <div className='overflow-x-hidden'>
+      <NavBar />
+    </div>
   )
 }
 
