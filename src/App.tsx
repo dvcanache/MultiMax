@@ -1,15 +1,14 @@
+import React from "react";
+import NavBar from "./Components/NavBar/NavBar";
 import SeccionPrincipal from "./Components/HeroSection/SeccionPrincipal";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <div className="bg-blue-500">
-        <h2>Multimax</h2>
-      </div>
-
+    <div className="overflow-x-hidden">
+      <NavBar />
       <SeccionPrincipal />
-    </>
+    </div>
   );
-}
+};
 
 export default App;
