@@ -1,0 +1,15 @@
+export const words = [
+    "Televisor",
+    "Computadora",
+    "Celular",
+    "Tablet",
+    "Laptop",
+    "Impresora",
+    "Monitor",
+    "Teclado",
+    "Mouse",
+    "Cámara",
+    "Cámara de Video",
+    "Micrófono",
+    "Audifonos",
+    "Parlantes",]
