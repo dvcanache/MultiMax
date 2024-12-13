@@ -1,27 +1,28 @@
 export const NavBarMenu = [
   {
-    id: 1,
+    id: 0,
     title: "Inicio",
-    link: "/"
+    link: "/",
+  },
+
+  {
+    id: 1,
+    title: "Afiliacion",
+    link: "https://afiliados.multimaxstore.com/"
   },
   {
     id: 2,
-    title: "Recomendados",
-    link: "#"
+    title: "CREDIMAX PRIORITYMAX",
+    link: "https://prioritymaxve.com/"
   },
   {
     id: 3,
-    title: "Noticias",
+    title: "Nuestras Tiendas",
     link: "#"
   },
   {
     id: 4,
     title: "Contacto",
-    link: "#"
-  },
-  {
-    id: 5,
-    title: "Carrito",
     link: "#"
   },
 ];
