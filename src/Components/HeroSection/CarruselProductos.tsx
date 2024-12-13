@@ -50,7 +50,7 @@ const CarruselProductos = () => {
   };
 
   return (
-    <div className="relative w-full max-w-xl mx-auto overflow-hidden flex flex-col justify-center items-center">
+    <div className="relative w-full max-w-xl mx-auto overflow-hidden flex flex-col justify-center items-center h-full">
       <div
         className="flex transition-transform duration-500"
         style={{
@@ -67,7 +67,7 @@ const CarruselProductos = () => {
             <img
               src={producto.imagen}
               alt={producto.nombre}
-              className="mx-auto mb-4 w-40 h-40 object-cover rounded-lg"
+              className="mx-auto mb-4 w-40 h-60 object-cover rounded-lg" // Cambié h-40 por h-60
             />
             <h2 className="text-lg font-semibold">{producto.nombre}</h2>
             <p className="text-gray-500">{producto.descripcion}</p>
@@ -75,7 +75,6 @@ const CarruselProductos = () => {
         ))}
       </div>
 
-      {/* Controles */}
       {indiceActivo > 0 && (
         <button
           onClick={anterior}
@@ -93,7 +92,6 @@ const CarruselProductos = () => {
         </button>
       )}
 
-      {/* Indicadores */}
       <div className="flex justify-center mt-6">
         {Array.from({
           length: Math.ceil(productos.length / productosVisibles),
