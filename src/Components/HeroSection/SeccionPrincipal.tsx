@@ -5,20 +5,12 @@ import SeccionProductos from "./SeccionProductos";
 const SeccionPrincipal: React.FC = () => {
   return (
     <div>
-      {/* Seccion de galeria de Descuentos de temporada */}
+      {/* Galería de Descuentos */}
       <CollageProductos />
+      <div className="my-4 border-t border-gray-300 w-11/12 mx-auto"></div>
 
-      {/* Línea divisoria centrada y con ancho del 85% */}
-      <div className="my-8 border-t border-gray-300 w-11/12 mx-auto"></div>
-
-      {/* Seccion Descuentos de productos en general*/}
+      {/* Descuentos de Productos */}
       <SeccionProductos />
-
-      {/* Seccion de Productos de hogar */}
-      {/* Seccion de Productos de deporte */}
-      {/* Seccion de Productos de ropa */}
-      {/* Seccion de Categorias */}
-      {/* Seccion de galeria en general */}
     </div>
   );
 };
