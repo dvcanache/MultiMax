@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavBarMenu } from "../../mockData/data";
 import SearchBar from "./SearchBar";
 import { MdMenu } from "react-icons/md";
@@ -69,7 +69,7 @@ const NavBar = () => {
         <ResponsiveAnimation open={navState === "menu"}>
           <div className="xl:hidden z-10">
           <HamburgerMenu />
-            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-72 md:inset-0 top-28" onClick={() => setNavState(null)}>
+            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-72 lg:inset-0 top-28" onClick={() => setNavState(null)}>
             </div>
           </div>
         </ResponsiveAnimation>
