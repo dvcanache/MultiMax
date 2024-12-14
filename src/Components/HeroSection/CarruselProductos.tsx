@@ -91,20 +91,6 @@ const CarruselProductos = () => {
           &#8594;
         </button>
       )}
-
-      <div className="flex justify-center mt-6">
-        {Array.from({
-          length: Math.ceil(productos.length / productosVisibles),
-        }).map((_, index) => (
-          <div
-            key={index}
-            className={`w-3 h-3 mx-2 rounded-full cursor-pointer ${
-              indiceActivo === index ? "bg-gray-800" : "bg-gray-400"
-            }`}
-            onClick={() => setIndiceActivo(index)}
-          ></div>
-        ))}
-      </div>
     </div>
   );
 };
