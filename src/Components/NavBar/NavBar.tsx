@@ -51,13 +51,13 @@ const NavBar = () => {
           {/* Mobile Buttons */}
           <div className="flex items-center gap-2">
             <div
-              className="cursor-pointer text-white"
+              className="cursor-pointer text-white md:hidden"
               onClick={() => toggleNavState("search")}
             >
               <FaSearch className="text-2xl" />
             </div>
             <div
-              className="cursor-pointer text-white"
+              className="cursor-pointer text-white xl:hidden"
               onClick={() => toggleNavState("menu")}
             >
               <MdMenu className="text-4xl" />
@@ -65,12 +65,12 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <div className="bg-blue-500 p-0 m-0 md:hidden">
+      <div className="bg-blue-500 p-0 m-0">
         <ResponsiveAnimation open={navState === "menu"}>
           <HamburgerMenu />
         </ResponsiveAnimation>
         <ResponsiveAnimation open={navState === "search"}>
-          <div className="p-2">
+          <div className="p-2 md:hidden">
             <SearchBar />
           </div>
         </ResponsiveAnimation>
