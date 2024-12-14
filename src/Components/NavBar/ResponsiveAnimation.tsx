@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const ResponsiveAnimation = ({ open, children }: { open: boolean, children: React.ReactNode }) => {
   return (
     <AnimatePresence>
-      {" "}
       {open && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
