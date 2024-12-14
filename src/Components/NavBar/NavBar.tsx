@@ -67,7 +67,9 @@ const NavBar = () => {
       </nav>
       <div className="bg-blue-500 p-0 m-0">
         <ResponsiveAnimation open={navState === "menu"}>
+          <div className="xl:hidden">
           <HamburgerMenu />
+          </div>
         </ResponsiveAnimation>
         <ResponsiveAnimation open={navState === "search"}>
           <div className="p-2 md:hidden">
