@@ -16,15 +16,14 @@ const NavBar = () => {
       setOpenMenu(true);
       setOpenSearch(false);
     }
-  }
-  
+  };
+
   const handleSearch = (openSearch: boolean) => {
     if (!openSearch) {
       setOpenSearch(true);
       setOpenMenu(false);
     }
-  }
-
+  };
 
   return (
     <>
@@ -78,19 +77,16 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <div >
-        <ResponsiveAnimation open={openMenu}>
-          <div onClick={() => handleMenu(openMenu)}>
-          <HamburgerMenu />
-          </div>
-        </ResponsiveAnimation>
-      </div>
-      <div >
-        <ResponsiveAnimation open={openSearch}>
-          <div className="bg-blue-500 p-2" onClick={() => handleSearch(openSearch)}>
+      <div className="bg-blue-500 p-0 m-0 md:hidden">
+          <ResponsiveAnimation open={openMenu}>
+            <HamburgerMenu />
+          </ResponsiveAnimation>
+          <ResponsiveAnimation open={openSearch}>
+            <div className="p-2">
             <SearchBar />
-          </div>
-        </ResponsiveAnimation>
+
+            </div>
+          </ResponsiveAnimation>
       </div>
     </>
   );
