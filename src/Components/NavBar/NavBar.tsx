@@ -69,14 +69,14 @@ const NavBar = () => {
         <ResponsiveAnimation open={navState === "menu"}>
           <div className="xl:hidden z-10">
           <HamburgerMenu />
-            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-64 md:inset-0 top-28" onClick={() => setNavState(null)}>
+            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-72 md:inset-0 top-28" onClick={() => setNavState(null)}>
             </div>
           </div>
         </ResponsiveAnimation>
         <ResponsiveAnimation open={navState === "search"}>
           <div className="md:hidden z-10 p-2">
             <SearchBar />
-            <div className="fixed inset-0 bg-black bg-opacity-0 z-10" onClick={() => setNavState(null)}>
+            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-" onClick={() => setNavState(null)}>
             </div>
           </div>
         </ResponsiveAnimation>
