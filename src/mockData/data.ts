@@ -26,3 +26,46 @@ export const NavBarMenu = [
     link: "#"
   },
 ];
+
+export const FilterProducts = [
+  {
+    id: 0,
+    type: "Audio y TV",
+  },
+  {
+    id: 1,
+    type: "Hogar Aires",
+  },
+  {
+    id: 2,
+    type: "Tecnología",
+  },
+  {
+    id: 3,
+    type: "Refrigeración",
+  },
+  {
+    id: 4,
+    type: "Ferretería",
+  },
+  {
+    id: 5,
+    type: "Línea Menor",
+  },
+  {
+    id: 6,
+    type: "Bienestar Cocina",
+  },
+  {
+    id: 7,
+    type: "Variedades",
+  },
+  {
+    id: 8,
+    type: "Lavado",
+  },
+  {
+    id: 9,
+    type: "Calzado",
+  }
+]

@@ -36,7 +36,7 @@ const NavBar = () => {
           {/* Menu */}
           <div className="hidden xl:block">
             <ul className="inline-flex m-0 p-0 gap-2">
-              {NavBarMenu.map((item) => (
+            {NavBarMenu.map((item) => (
                 <li key={item.id}>
                   <a
                     href={item.link}
