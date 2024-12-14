@@ -2,15 +2,33 @@ import React from "react";
 import { NavBarMenu } from "../../mockData/data";
 import SearchBar from "./SearchBar";
 import { MdMenu } from "react-icons/md";
-import ResponsiveMenu from "./ResponsiveMenu";
+import { FaSearch } from "react-icons/fa";
+import ResponsiveAnimation from "./ResponsiveAnimation";
+import HamburgerMenu from "./HamburgerMenu";
 
 const LogoUrl = `https://multimax.com.ve/wp-content/uploads/2024/11/Logo-Multimax-web.png`;
 
 const NavBar = () => {
-  const [open, setOpen] = React.useState(false);
+  const [openMenu, setOpenMenu] = React.useState(false);
+  const [openSearch, setOpenSearch] = React.useState(false);
+  const handleMenu = (openMenu: boolean) => {
+    if (!openMenu) {
+      setOpenMenu(true);
+      setOpenSearch(false);
+    }
+  }
+  
+  const handleSearch = (openSearch: boolean) => {
+    if (!openSearch) {
+      setOpenSearch(true);
+      setOpenMenu(false);
+    }
+  }
+
+
   return (
     <>
-      <nav className="bg-blue-500 w-full px-4">
+      <nav className="bg-blue-500 w-full">
         <div className="container flex justify-between items-center p-4">
           {/*Seccion logo*/}
           <div className="text-2xl flex items-center">
@@ -22,9 +40,11 @@ const NavBar = () => {
               />
             </a>
           </div>
-          <div className="w-1/2 xl:w-1/3">
+          {/*Seccion De Barra De Busqueda*/}
+          <div className="w-1/2 xl:w-1/3 hidden md:block">
             <SearchBar />
           </div>
+
           {/*Seccion Menu*/}
           <div className="hidden xl:block">
             <ul className="inline-flex m-0 p-0 gap-2">
@@ -40,13 +60,38 @@ const NavBar = () => {
               ))}
             </ul>
           </div>
-          {/*Seccion Hamburger Menu*/}
-          <div className="xl:hidden" onClick={() => setOpen(!open)}>
-            <MdMenu className="text-4xl text-white" />
+          <div className="flex items-center gap-2">
+            {/*Seccion Busqueda Responsive*/}
+            <div
+              className="justify-end cursor-pointer md:hidden"
+              onClick={() => setOpenSearch(!openSearch)}
+            >
+              <FaSearch className="text-2xl text-white" />
+            </div>
+            {/*Seccion Hamburger Menu*/}
+            <div
+              className="xl:hidden cursor-pointer"
+              onClick={() => setOpenMenu(!openMenu)}
+            >
+              <MdMenu className="text-4xl text-white" />
+            </div>
           </div>
         </div>
       </nav>
-      <ResponsiveMenu open={open}/>
+      <div >
+        <ResponsiveAnimation open={openMenu}>
+          <div onClick={() => handleMenu(openMenu)}>
+          <HamburgerMenu />
+          </div>
+        </ResponsiveAnimation>
+      </div>
+      <div >
+        <ResponsiveAnimation open={openSearch}>
+          <div className="bg-blue-500 p-2" onClick={() => handleSearch(openSearch)}>
+            <SearchBar />
+          </div>
+        </ResponsiveAnimation>
+      </div>
     </>
   );
 };
