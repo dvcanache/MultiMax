@@ -1,5 +1,5 @@
 import NavBar from "./Components/NavBar/NavBar";
-import SeccionPrincipal from "./Components/HeroSection/SeccionPrincipal";
+import SeccionPrincipal from "./Components/Header/SeccionPrincipal";
 
 const App = () => {
   return (

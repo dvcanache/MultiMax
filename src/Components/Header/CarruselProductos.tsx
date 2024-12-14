@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const productos = [
   {
@@ -39,13 +39,13 @@ const CarruselProductos = () => {
 
   const siguiente = () => {
     if (indiceActivo < productos.length - productosVisibles) {
-      setIndiceActivo((prev) => prev + 1);
+      setIndiceActivo((prev : number) => prev + 1);
     }
   };
 
   const anterior = () => {
     if (indiceActivo > 0) {
-      setIndiceActivo((prev) => prev - 1);
+      setIndiceActivo((prev : number) => prev - 1);
     }
   };
 
