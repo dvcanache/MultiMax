@@ -5,7 +5,7 @@ import {AiOutlineSearch} from 'react-icons/ai'
 const SearchBar = () => {
 
   return (
-    <form className='w-400px'>
+    <form className='w-400px z-50'>
         <div className="relative">
             <input type="search" placeholder='¿En que estas pensando?' className='w-full py-1 px-4 text-sm rounded-full bg-white-100 border-4 hover:border-grey-400 focus:border-grey-400 focus:outline-none'/>
             <button className='absolute right-2 top-1/2 -translate-y-1/2 py-1 px-2 rounded-full bg-white'>

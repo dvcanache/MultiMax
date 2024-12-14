@@ -2,7 +2,7 @@ import { NavBarMenu } from "../../mockData/data";
 
 const HamburgerMenu = () => {
   return (
-    <div className="text-md text-center text-white bg-blue-500 m-0">
+    <div className="text-md text-center text-white bg-blue-500 m-0 z-50">
       <ul className="sm:flex flex-col justify-center items-center md:flex-row">
         {NavBarMenu.map((item) => (
           <li

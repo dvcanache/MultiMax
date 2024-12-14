@@ -11,9 +11,9 @@ const ResponsiveAnimation = ({ open, children }: { open: boolean, children: Reac
             transition={{ duration: 0.2 }}
             className="sticky top- left-0 right-0 w-full z-50"
           >
-            <div>
+            <>
                 {children}
-            </div>
+            </>
           </motion.div>
       )}
     </AnimatePresence>

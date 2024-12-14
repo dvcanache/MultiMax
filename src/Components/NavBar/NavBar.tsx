@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavBarMenu } from "../../mockData/data";
 import SearchBar from "./SearchBar";
 import { MdMenu } from "react-icons/md";
@@ -67,18 +67,23 @@ const NavBar = () => {
       </nav>
       <div className="bg-blue-500 p-0 m-0">
         <ResponsiveAnimation open={navState === "menu"}>
-          <div className="xl:hidden">
+          <div className="xl:hidden z-10">
           <HamburgerMenu />
+            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-64 md:inset-0 top-28" onClick={() => setNavState(null)}>
+            </div>
           </div>
         </ResponsiveAnimation>
         <ResponsiveAnimation open={navState === "search"}>
-          <div className="p-2 md:hidden">
+          <div className="md:hidden z-10 p-2">
             <SearchBar />
+            <div className="fixed inset-0 bg-black bg-opacity-0 z-10" onClick={() => setNavState(null)}>
+            </div>
           </div>
         </ResponsiveAnimation>
       </div>
     </>
   );
+
 };
 
 export default NavBar;
