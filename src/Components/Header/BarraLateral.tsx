@@ -25,7 +25,9 @@ const BarraLateral: React.FC<BarraLateralProps> = ({
       {/* Botón para abrir/cerrar barra lateral */}
       <button
         className={`fixed ${
-          estaScroll ? "top-20 left-0 rounded-r-full" : "top-20 left-8 rounded-r-full"
+          estaScroll
+            ? "top-20 left-0 rounded-r-full"
+            : "top-20 left-8 rounded-r-full"
         } bg-blue-500 text-white px-1 py-2 shadow-md hover:bg-blue-700 focus:outline-none z-20 flex items-center justify-center transition-all duration-300 ease-in
         ${estaScroll ? "md:left-0 w-10" : "md:left-8 w-20"} hidden md:flex`}
         style={{
@@ -55,7 +57,7 @@ const BarraLateral: React.FC<BarraLateralProps> = ({
 
       {/* Barra lateral */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white text-white transform ${
+        className={`fixed top-0 left-0 h-full w-72 bg-white text-white transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
         onClick={(e) => e.stopPropagation()}
@@ -77,21 +79,23 @@ const BarraLateral: React.FC<BarraLateralProps> = ({
             ✕
           </button>
         </div>
-          <div className="w-full bg-blue-400 text-white p-3.5 font-semibold text-lg inline-flex justify-between items-center">
-            Filtros
-            <FaFilter />
-          </div>
+        <div className="w-full bg-blue-400 text-white p-3.5 font-semibold text-lg inline-flex justify-between items-center">
+          Filtros
+          <FaFilter />
+        </div>
         <ul className="">
           <div className="overflow-y-auto h-[calc(100vh-130px)]">
-          {FilterProducts.map((item) => (
-            <li
-              key={item.id}
-              className="bg-white text-gray-800 hover:bg-gray-200 py-3.5 px-4 cursor-pointer flex items-center justify-between"
-            >
-              <a className=" font-semibold text-md text-nowrap">{item.type}</a>
-              <img src={item.image} alt={item.type} className="h-8 w-8"/>
-            </li>
-          ))}
+            {FilterProducts.map((item) => (
+              <li
+                key={item.id}
+                className="bg-white text-gray-800 hover:bg-gray-200 py-3.5 px-4 cursor-pointer flex items-center justify-between"
+              >
+                <a className=" font-semibold text-md text-nowrap">
+                  {item.type}
+                </a>
+                <img src={item.image} alt={item.type} className="h-8 w-8" />
+              </li>
+            ))}
           </div>
         </ul>
       </div>
