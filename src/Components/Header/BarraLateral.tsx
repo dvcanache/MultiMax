@@ -77,7 +77,7 @@ const BarraLateral: React.FC<BarraLateralProps> = ({
             ✕
           </button>
         </div>
-          <div className="w-full bg-blue-400 text-white p-3.5 font-semibold text-lg inline-flex justify-between">
+          <div className="w-full bg-blue-400 text-white p-3.5 font-semibold text-lg inline-flex justify-between items-center">
             Filtros
             <FaFilter />
           </div>
@@ -86,9 +86,10 @@ const BarraLateral: React.FC<BarraLateralProps> = ({
           {FilterProducts.map((item) => (
             <li
               key={item.id}
-              className="bg-white text-gray-800 hover:bg-gray-200 py-3.5 px-4 cursor-pointer"
+              className="bg-white text-gray-800 hover:bg-gray-200 py-3.5 px-4 cursor-pointer flex items-center justify-between"
             >
               <a className=" font-semibold text-md text-nowrap">{item.type}</a>
+              <img src={item.image} alt={item.type} className="h-8 w-8"/>
             </li>
           ))}
           </div>
