@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import CollageProductos from "./CollageProductos";
 import SeccionProductos from "./SeccionProductos";
 import BarraLateral from "./BarraLateral";
+import ProductGrid from "../Main/GridProductos/GridProductos";
+import { ProductsData } from "../../data/products";
 
 const SeccionPrincipal: React.FC = () => {
   const [isBarraLateralOpen, setIsBarraLateralOpen] = useState(false);
@@ -44,6 +46,11 @@ const SeccionPrincipal: React.FC = () => {
 
         {/* Descuentos de Productos */}
         <SeccionProductos />
+
+          <div className="my-8 border-t border-gray-300 w-11/12 mx-auto"></div>
+        <div className="container mx-auto py-8">
+          <ProductGrid products={ProductsData} />
+        </div>
       </div>
     </div>
   );
