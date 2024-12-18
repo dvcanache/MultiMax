@@ -3,20 +3,20 @@ import CarruselProductos from "./CarruselProductos";
 
 const SeccionProductos: React.FC = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center p-4 h-auto space-y-4 lg:space-y-0 lg:space-x-4">
+    <div className="flex flex-col lg:flex-row items-center justify-center p-4 space-y-4 lg:space-y-0 lg:space-x-4">
       {/* Sección de la imagen */}
-      <div className="flex-1 w-full lg:w-1/2 p-4 flex items-center justify-center">
-        <div className="w-full h-auto max-w-lg lg:max-w-full rounded-lg border shadow-md overflow-hidden flex items-center justify-center bg-white">
+      <div className="flex-1 lg:w-1/2 h-[400px] flex items-center justify-center">
+        <div className="w-full h-full rounded-lg overflow-hidden flex items-center justify-center bg-gray-200">
           <img
-            src="https://via.placeholder.com/200x100"
-            alt="Imagen de producto"
-            className="w-full h-auto object-cover lg:object-contain"
+            src="/images/PromoTv.jpeg"
+            alt="Imagen promocional"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
 
       {/* Sección del carrusel */}
-      <div className="flex-1 w-full lg:w-1/2 flex items-center justify-center">
+      <div className="flex-1 lg:w-1/2 h-[400px] flex items-center justify-center">
         <CarruselProductos />
       </div>
     </div>
