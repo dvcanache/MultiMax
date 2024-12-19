@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import CollageProductos from "./CollageProductos";
 import SeccionProductos from "./SeccionProductos";
 import BarraLateral from "./BarraLateral";
-import ProductGrid from "../Main/GridProductos/GridProductos";
-import { ProductsData } from "../../data/products";
+import SeccionMain from "../Main/GridProductos/SeccionMain";
 
-const SeccionPrincipal: React.FC = () => {
+
+const SeccionHeader: React.FC = () => {
   const [isBarraLateralOpen, setIsBarraLateralOpen] = useState(false);
   const [estaScroll, setEstaScroll] = useState(false);
 
@@ -48,12 +48,12 @@ const SeccionPrincipal: React.FC = () => {
         <SeccionProductos />
 
           <div className="my-8 border-t border-gray-300 w-11/12 mx-auto"></div>
-        <div className="container mx-auto py-8">
-          <ProductGrid products={ProductsData} />
-        </div>
+
+          <SeccionMain/>
+
       </div>
     </div>
   );
 };
 
-export default SeccionPrincipal;
+export default SeccionHeader;
