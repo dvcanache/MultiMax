@@ -36,7 +36,7 @@ const NavBar = () => {
           {/* Menu */}
           <div className="hidden xl:block">
             <ul className="inline-flex m-0 p-0 gap-2">
-            {NavBarMenu.map((item) => (
+              {NavBarMenu.map((item) => (
                 <li key={item.id}>
                   <a
                     href={item.link}
@@ -68,22 +68,25 @@ const NavBar = () => {
       <div className="bg-blue-500 p-0 m-0">
         <ResponsiveAnimation open={navState === "menu"}>
           <div className="xl:hidden z-10">
-          <HamburgerMenu />
-            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-72 lg:inset-0 top-28" onClick={() => setNavState(null)}>
-            </div>
+            <HamburgerMenu />
+            <div
+              className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-72 lg:inset-0 top-28"
+              onClick={() => setNavState(null)}
+            ></div>
           </div>
         </ResponsiveAnimation>
         <ResponsiveAnimation open={navState === "search"}>
           <div className="md:hidden z-10 p-2">
             <SearchBar />
-            <div className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-" onClick={() => setNavState(null)}>
-            </div>
+            <div
+              className="fixed inset-0 bg-black bg-opacity-0 z-10 sm:inset-0 top-"
+              onClick={() => setNavState(null)}
+            ></div>
           </div>
         </ResponsiveAnimation>
       </div>
     </>
   );
-
 };
 
 export default NavBar;

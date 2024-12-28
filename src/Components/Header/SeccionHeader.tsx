@@ -4,7 +4,6 @@ import SeccionProductos from "./SeccionProductos";
 import BarraLateral from "./BarraLateral";
 import SeccionMain from "../Main/GridProductos/SeccionMain";
 
-
 const SeccionHeader: React.FC = () => {
   const [isBarraLateralOpen, setIsBarraLateralOpen] = useState(false);
   const [estaScroll, setEstaScroll] = useState(false);
@@ -47,10 +46,9 @@ const SeccionHeader: React.FC = () => {
         {/* Descuentos de Productos */}
         <SeccionProductos />
 
-          <div className="my-8 border-t border-gray-300 w-11/12 mx-auto"></div>
+        <div className="my-8 border-t border-gray-300 w-11/12 mx-auto"></div>
 
-          <SeccionMain/>
-
+        <SeccionMain />
       </div>
     </div>
   );

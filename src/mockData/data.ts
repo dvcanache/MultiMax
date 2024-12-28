@@ -95,5 +95,3 @@ export const FilterProducts = [
     image: "https://multimax.com.ve/wp-content/uploads/2023/04/calzado.png",
   },
 ];
-
-
